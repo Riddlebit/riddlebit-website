@@ -1,0 +1,144 @@
+---
+import { Markdown } from 'astro/components';
+const setbackText = `
+## Current Project - Setback
+
+Setback is an innovative new multiplayer shooter where you don’t kill your opponents.
+Instead they are rewinded back a few seconds to a previous location.
+
+Players can choose from a variety of different weapons and special consumables.
+There is a high focus on character mobility with several movement mechanics that can be utilized to move swiftly through the arena.
+The various game modes (Race, Safe Zone and Capture the Flag etc.) are designed around the fact that being rewinded in time is a disadvantage.
+We hope Setback will provide a thrilling and engaging experience for those who love fast-paced shooters.
+
+Setback is currently available for wishlisting on Steam. You can also sign up to participate in upcoming playtests!
+`;
+---
+
+<div class="games">
+  <a id="games" class="nav-anchor"></a>
+  <div class="content">
+    <div class="desc">
+      <Markdown content={setbackText} />
+    </div>
+    <div class="steam-card">
+      <iframe src="https://store.steampowered.com/widget/1119780/" frameborder="0" width="646" height="190"></iframe>
+    </div>
+    <div class="steam-card-small">
+      <div class="steam-icon">
+        <svg><use href="/assets/icons.svg#steam" /></svg>
+      </div>
+      <div class="wishlist-btn">
+        <a href="https://store.steampowered.com/app/1119780/Setback/" target="_blank">Wishlist on Steam</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .games {
+    width: 100%;
+    background-image: url("https://i.imgur.com/0gHsnmB.jpg");
+    background-color: rgb(80, 80, 80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 4px #111;
+  }
+
+  .games h1, h2 {
+    margin-top: 0;
+    color: white;
+  }
+
+  .games p {
+    color: #ddd;
+  }
+
+  .content {
+    /* margin: 2rem; */
+    margin-bottom: 4rem;
+    width: 100%;
+    max-width: var(--content-width);
+    display: flex;
+    gap: 4rem;
+  }
+
+  .desc {
+    margin: 2rem;
+  }
+
+  .steam-card {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .steam-card-small {
+    width: 100%;
+    max-width: 400px;
+    fill: #acafb9;
+    display: none;
+    flex-direction: column;
+    background-color: #282e39;
+    box-shadow: 0 1px 5px rgba(1, 1, 1, 0.8);
+  }
+
+  .steam-icon {
+    margin: 1rem 0;
+    width: 100%;
+    max-height: 160px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wishlist-btn {
+    margin: 1rem;
+    background: linear-gradient(to right, rgb(111, 167, 32) 5%, rgb(88, 138, 27) 95%);
+  }
+
+  .wishlist-btn:hover {
+    background: linear-gradient( to right, #8ed629 5%, #6aa621 95%);
+  }
+
+  .wishlist-btn a {
+    padding: 0.5rem 0;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  @media (max-width: 1200px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .desc {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .steam-card {
+      display: none;
+    }
+
+    .steam-card-small {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .steam-card-small {
+    }
+  }
+</style>

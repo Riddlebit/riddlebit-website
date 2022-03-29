@@ -1,0 +1,128 @@
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-social">
+      <a href="https://twitter.com/setback">
+        <svg><use href="/assets/icons.svg#twitter" /></svg>
+      </a>
+      <a href="https://discord.gg/ZrsJFan">
+        <svg><use href="/assets/icons.svg#discord" /></svg>
+      </a>
+      <a href="https://www.linkedin.com/company/riddlebit">
+        <svg><use href="/assets/icons.svg#linkedin" /></svg>
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Riddlebit">
+        <svg><use href="/assets/icons.svg#github" /></svg>
+        GitHub
+      </a>
+      <a href="mailto:contact@riddlebit.net">
+        <svg><use href="/assets/icons.svg#envelope" /></svg>
+        Contact Us
+      </a>
+      <a href="/privacy">
+        <svg><use href="/assets/icons.svg#user-shield" /></svg>
+        Privacy Policy
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      Website made with 🤍 by Riddlebit
+    </div>
+    <div>
+      &copy; 2022 Riddlebit AS
+    </div>
+    <div>
+      💙💛
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    min-height: 120px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer * {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  .footer-top {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer-social {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-social a {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 2rem;
+  }
+
+  .footer-social svg {
+    fill: white;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-links svg {
+    margin: 0.5rem;
+    fill: white;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    .footer-top {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .footer-links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

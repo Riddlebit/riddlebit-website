@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <div class="wrapper">
+    <div class="content">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .wrapper {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    padding: 1rem 4rem;
+    max-width: 1000px;
+    font-weight: 300;
+  }
+
+  .content :global(h2) {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .content :global(p) {
+    margin-top: 0;
+  }
+
+  @media (min-width: 1200px) {
+
+    .content {
+      box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    }
+
+  }
+
+  @media (max-width: 730px) {
+    .wrapper {
+      padding-top: 2rem;
+    }
+
+    .content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>

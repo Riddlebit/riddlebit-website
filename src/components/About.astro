@@ -1,0 +1,43 @@
+---
+import { Markdown } from 'astro/components';
+const aboutText = `
+# Who Are We?
+
+Riddlebit Software is a game development company based in Trondheim, Norway.
+Our aim is to make fun and engaging game experiences, while also developing innovative game technology that stand out.
+We are currently a team of eight that share the same passion about games and game development.
+`;
+---
+
+<div class="about">
+  <a id="about" class="nav-anchor"></a>
+  <div class="content">
+    <Markdown content={aboutText} />
+  </div>
+</div>
+
+<style>
+  .about {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    margin: 0 2rem;
+    max-width: 830px;
+  }
+
+  .about h1 {
+    text-align: center;
+  }
+
+  @media (max-width: 1000px) {
+    .content {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+</style>
