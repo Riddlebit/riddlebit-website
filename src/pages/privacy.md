@@ -64,16 +64,15 @@ or to assist us in analyzing how our Service is used.
 These third parties have access to your data only to perform these tasks on our behalf
 and are obligated not to disclose or use it for any other purpose.
 
-
+<!--
 ## 📈 Google Analytics
 
 We use Google Analytics, a service which transmits website traffic data to Google servers.
-Our instance of Google Analytics does not identify individual users or associate your IP address
-with any other data held by Google. Reports provided by Google Analytics are used to help us understand
-website traffic and usage.
+Our instance of Google Analytics anonymizes your IP address and does not identify individual users.
+Reports provided by Google Analytics are used to help us understand website traffic and usage.
 
 You may opt out of this tracking at any time by activating the "Do Not Track" setting in your browser.
-
+-->
 
 ## 🔗 Links to Other Sites
 
