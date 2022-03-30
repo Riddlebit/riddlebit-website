@@ -2,15 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import About from '../components/About.astro';
-import Social from '../components/Social.astro';
 import Games from '../components/Games.astro';
 import OurTeam from '../components/OurTeam.astro';
 ---
 
 <BaseLayout>
   <Header />
-  <About />
-  <Social />
-  <Games />
-  <OurTeam />
+  <div class="content">
+    <About />
+    <Games />
+    <OurTeam />
+  </div>
 </BaseLayout>
+
+<style>
+  .content {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+</style>

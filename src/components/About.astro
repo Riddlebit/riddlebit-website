@@ -1,5 +1,6 @@
 ---
 import { Markdown } from 'astro/components';
+import Social from '../components/Social.astro';
 const aboutText = `
 # Who Are We?
 
@@ -13,13 +14,12 @@ We are currently a team of eight that share the same passion about games and gam
   <a id="about" class="nav-anchor"></a>
   <div class="content">
     <Markdown content={aboutText} />
+    <Social />
   </div>
 </div>
 
 <style>
   .about {
-    margin-top: 5rem;
-    margin-bottom: 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
