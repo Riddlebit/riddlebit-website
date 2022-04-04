@@ -13,6 +13,7 @@ touch .nojekyll
 echo 'www.riddlebit.net' > CNAME
 
 git init
+git switch -c gh-pages
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:Riddlebit/riddlebit-website.git main:gh-pages
+git push -f git@github.com:Riddlebit/riddlebit-website.git gh-pages

@@ -4,16 +4,30 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar.svelte';
 import Footer from '../components/Footer.astro';
 
-let title = 'Riddlebit Software';
+const title = 'Riddlebit Software';
+const logoUrl = 'https://i.imgur.com/dXmJIbo.png';
+const shortDesc = 'Making the games of tomorrow, today';
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <title>{title}</title>
-
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content={shortDesc} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@setback" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Riddlebit" />
+    <meta property="og:image" content={logoUrl} />
+    <meta property="og:description" content={shortDesc} />
 
   </head>
   <body>
