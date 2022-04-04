@@ -45,12 +45,12 @@
       <li on:click={toggleNav} class="navlink">
         <!-- Open mobile menu icon -->
         <svg class={`toggle-button ${!navOpen ? "active" : ""}`}>
-          <use href="/assets/icons.svg#bars" />
+          <use href="icons.svg#bars" />
         </svg>
 
         <!-- Close mobile menu icon -->
         <svg class={`toggle-button ${navOpen ? "active" : ""}`}>
-          <use href="/assets/icons.svg#xmark" />
+          <use href="icons.svg#xmark" />
         </svg>
       </li>
     {/if}

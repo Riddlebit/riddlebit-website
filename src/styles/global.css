@@ -4,7 +4,7 @@
 	font-family: 'Heebo', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 
 	--content-width: 1200px;
 }
