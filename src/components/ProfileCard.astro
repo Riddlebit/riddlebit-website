@@ -6,7 +6,7 @@ const { imageUrl, name, role } = Astro.props;
   <img src={imageUrl} alt={[name, role].join(" ")} />
   <div class="description">
     <p>{role}</p>
-    <h3>{name}</h3>
+    <h1>{name}</h1>
   </div>
 </div>
 
@@ -27,6 +27,10 @@ const { imageUrl, name, role } = Astro.props;
   .description > * {
     margin: 0;
     font-weight: 400;
+  }
+
+  .description h1 {
+    font-size: 1.17em;
   }
 
   .description p {
