@@ -2,7 +2,7 @@
 const { imageUrl, name, role } = Astro.props;
 ---
 
-<div class="profile-card" tabindex="0">
+<div class="profile-card" tabindex="0" onclick={`_paq.push(['trackEvent', 'Misc', 'Profile Click', '${name}']);`}>
   <img src={imageUrl} alt={[name, role].join(" ")} />
   <div class="description">
     <p>{role}</p>

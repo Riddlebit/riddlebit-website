@@ -58,7 +58,7 @@
     <!-- Navbar Links -->
     {#each navItems as item}
       <li class="navlink">
-        <a on:click={toggleNav} href={item.href} rel="noopener" aria-label={item.label}>{item.label}</a>
+        <a on:click={() => {toggleNav(); _paq.push(['trackEvent', 'Navigation', 'Navbar Click', item.label])}} href={item.href} rel="noopener" aria-label={item.label}>{item.label}</a>
       </li>
     {/each}
   </ul>
