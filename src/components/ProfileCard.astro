@@ -34,7 +34,7 @@ const { imageUrl, name, role } = Astro.props;
   }
 
   .description p {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: #555;
   }
 
@@ -44,6 +44,18 @@ const { imageUrl, name, role } = Astro.props;
 
   .profile-card:active {
     animation: none;
+  }
+
+  @media (max-width: 600px) {
+    .description {
+      margin: 0.5rem;
+    }
+    .description > h1 {
+      font-size: 0.9em
+    }
+    .description > p {
+      font-size: 0.7em;
+    }
   }
 
   @keyframes bounce { 
