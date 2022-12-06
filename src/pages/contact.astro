@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="container">
+    <div class="content">
+      <h3>Riddlebit</h3>
+      <h1>Contact Us</h1>
+      <div class="section">
+        <h2>Marketing Inquiries</h2>
+        <p>For marketing inquiries, please contact us at
+          <a href="mailto:marketing@riddlebit.net" aria-label="Send email to marketing">marketing@riddlebit.net</a>
+        </p>
+      </div>
+      <div class="section">
+        <h2>Business Inquiries</h2>
+        <p>For other business inquiries, please contact us at
+          <a href="mailto:contact@riddlebit.net" aria-label="Send email to business">contact@riddlebit.net</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 1rem;
+  }
+
+  .content {
+    width: 1000px;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .section {
+    margin-left: 2rem;
+  }
+
+  .section h2 {
+    margin-bottom: 0;
+  }
+
+  .section p {
+    margin-top: 0;
+  }
+</style>
