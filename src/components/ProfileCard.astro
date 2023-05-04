@@ -1,9 +1,18 @@
 ---
-const { imageUrl, name, role } = Astro.props;
+const { imageUrl, name, role, mail } = Astro.props;
 ---
 
 <div class="profile-card" tabindex="0" onclick={`_paq.push(['trackEvent', 'Misc', 'Profile Click', '${name}']);`}>
-  <img src={imageUrl} alt={[name, role].join(" ")} />
+  <div class="image-container">
+    <img src={imageUrl} alt={[name, role].join(" ")} />
+    {mail &&
+      <div class="mail-icon">
+        <a href={"mailto:" + mail} target="_blank" aria-label={"Mail to " + name}>
+          <svg><use href="/icons.svg#envelope" /></svg>
+        </a>
+      </div>
+    }
+  </div>
   <div class="description">
     <p>{role}</p>
     <h1>{name}</h1>
@@ -15,8 +24,26 @@ const { imageUrl, name, role } = Astro.props;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
   }
 
-  .profile-card img {
+  .image-container {
+    position: relative;
+  }
+
+  .image-container img {
     width: 100%;
+    aspect-ratio: 1;
+  }
+
+  .mail-icon {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 1.2rem;
+  }
+
+  .mail-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(2px 2px 5px black);
   }
 
   .description {
@@ -55,6 +82,14 @@ const { imageUrl, name, role } = Astro.props;
     }
     .description > p {
       font-size: 0.7em;
+    }
+    .mail-icon {
+      bottom: 0.5rem;
+      right: 0.8rem;
+    }
+    .mail-icon svg {
+      width: 1.2rem;
+      height: 1.2rem;
     }
   }
 
