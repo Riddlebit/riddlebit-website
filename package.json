@@ -1,5 +1,6 @@
 {
   "name": "riddlebit-website",
+  "type": "module",
   "version": "1.0",
   "private": true,
   "scripts": {
@@ -8,11 +9,10 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "devDependencies": {
-    "astro": "^1.2.5"
-  },
   "dependencies": {
-    "@astrojs/svelte": "^1.0.0",
-    "svelte": "^3.50.1"
+    "@astrojs/svelte": "^5.7.0",
+    "astro": "^4.13.0",
+    "svelte": "^4.2.18",
+    "typescript": "^5.5.4"
   }
 }
