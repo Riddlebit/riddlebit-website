@@ -40,21 +40,21 @@
   }`}
   style="--navbar-height:{`${navbarHeight}px`}"
 >
+  {#if mobileNav}
+    <button on:click={toggleNav} class="nav-toggle-button">
+      <!-- Open mobile menu icon -->
+      <svg class={`toggle-button ${!navOpen ? "active" : ""}`}>
+        <use href="/icons.svg#bars" />
+      </svg>
+
+      <!-- Close mobile menu icon -->
+      <svg class={`toggle-button ${navOpen ? "active" : ""}`}>
+        <use href="/icons.svg#xmark" />
+      </svg>
+    </button>
+  {/if}
+
   <ul class={`navlinks ${mobileNav ? "mobile" : ""}`}>
-    {#if mobileNav}
-      <li on:click={toggleNav} class="navlink">
-        <!-- Open mobile menu icon -->
-        <svg class={`toggle-button ${!navOpen ? "active" : ""}`}>
-          <use href="/icons.svg#bars" />
-        </svg>
-
-        <!-- Close mobile menu icon -->
-        <svg class={`toggle-button ${navOpen ? "active" : ""}`}>
-          <use href="/icons.svg#xmark" />
-        </svg>
-      </li>
-    {/if}
-
     <!-- Navbar Links -->
     {#each navItems as item}
       <li class="navlink">
@@ -62,6 +62,7 @@
       </li>
     {/each}
   </ul>
+
 </nav>
 
 <style>
@@ -75,7 +76,8 @@
     z-index: 1000;
     transition: 0.3s;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .navbar.opaque {
@@ -85,6 +87,13 @@
   .navbar.open {
     height: 100vh;
     background-color: #252525;
+  }
+
+  .nav-toggle-button {
+    width: 100%;
+    border: none;
+    height: var(--navbar-height);
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .navlinks {
@@ -98,6 +107,10 @@
     flex-direction: row;
   }
 
+  .navlinks button {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
   .navlinks.mobile {
     flex-direction: column;
     justify-content: start;
@@ -105,6 +118,8 @@
   }
 
   .navlink {
+    padding: 0;
+    border: 0;
     width: 100%;
     min-width: 120px;
     height: var(--navbar-height);
