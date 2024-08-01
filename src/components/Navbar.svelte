@@ -1,9 +1,20 @@
 <script>
   import { onMount } from 'svelte';
 
+  // Navbar data
+  const navbarHeight = 60;
+  const navItems = [
+    { label: 'Home', id: '', href: '/#header' },
+    { label: 'About Us', id: 'about', href: '/#about' },
+    { label: 'Games', id: 'games', href: '/#games' },
+    { label: 'Our Team', id: 'our-team', href: '/#our-team' },
+    { label: 'Careers', id: '', href: 'https://thehub.io/startups/riddlebit-software' }
+  ];
+
   let navOpen = false;
   let mobileNav = false;
   let scrollY, isHomepage;
+  let currentSection = 'none';
 
   const toggleNav = () => {
     navOpen = !navOpen;
@@ -14,25 +25,38 @@
     navOpen = false;
   };
 
+  const onScroll = () => {
+    currentSection = 'none';
+    scrollY = window.scrollY;
+
+    if (mobileNav) return;
+
+    navItems.forEach(item => {
+      if (!item || !item.id) return;
+
+      const element = document.getElementById(item.id);
+      if (!element) return
+
+      const offsetTop = element.offsetTop;
+      if (scrollY >= offsetTop-10) {
+        currentSection = item.id;
+      }
+    });
+  }
+
   onMount(() => {
     const mobileQuery = window.matchMedia('(max-width: 730px)');
     mobileQueryChanged(mobileQuery);
     mobileQuery.addEventListener("change", mobileQueryChanged);
     isHomepage = window.location.pathname === "/";
+    scrollY = window.scrollY;
+    onScroll();
+
+    document.addEventListener("scroll", (e) => {
+      onScroll();
+    });
   });
-
-  // Navbar data
-  const navbarHeight = 60;
-  const navItems = [
-    { label: 'Home', href: '/#header' },
-    { label: 'About Us', href: '/#about' },
-    { label: 'Games', href: '/#games' },
-    { label: 'Our Team', href: '/#our-team' },
-    { label: 'Careers', href: 'https://thehub.io/startups/riddlebit-software' }
-  ];
 </script>
-
-<svelte:window bind:scrollY />
 
 <nav
   class={`navbar ${navOpen && mobileNav ? "open" : ""} ${
@@ -57,8 +81,8 @@
   <ul class={`navlinks ${mobileNav ? "mobile" : ""}`}>
     <!-- Navbar Links -->
     {#each navItems as item}
-      <li class="navlink">
-        <a on:click={() => {toggleNav(); _paq.push(['trackEvent', 'Navigation', 'Navbar Click', item.label])}} href={item.href} rel="noopener" aria-label={item.label}>{item.label}</a>
+      <li class={`navlink ${currentSection == item.id ? "active" : ""}`}>
+        <a on:click={() => {toggleNav(); /** navbar tracking goes here */}} href={item.href} rel="noopener" aria-label={item.label}>{item.label}</a>
       </li>
     {/each}
   </ul>
@@ -134,6 +158,10 @@
     height: 100%;
     color: white;
     text-decoration: none;
+  }
+
+  .navlink.active {
+    box-shadow:inset 0px 5px 0px 0px rgba(255, 255, 255, 0.75);
   }
 
   .navbar a:hover {
