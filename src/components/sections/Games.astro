@@ -1,35 +1,26 @@
 ---
-const setbackData = {
-  title: 'Current Project - Setback',
-  paragraphs: [
-    `Setback is an innovative new multiplayer shooter where you don’t kill your opponents.
-    Instead they are rewinded back a few seconds to a previous location.`,
-    `Players can choose from a variety of different weapons and special consumables.
-    There is a high focus on character mobility with several movement mechanics that can be utilized to move swiftly through the arena.
-    The various game modes (Race, Safe Zone and Capture the Flag etc.) are designed around the fact that being rewinded in time is a disadvantage.
-    We hope Setback will provide a thrilling and engaging experience for those who love fast-paced shooters.`,
-    `Setback is currently available for wishlisting on Steam. You can also sign up to participate in upcoming playtests!`
-  ]
-};
 ---
 
 <div class="games">
   <span id="games" class="nav-anchor" />
   <div class="content">
-    <div class="desc">
-      <h2>{setbackData.title}</h2>
-      {setbackData.paragraphs.map(p => <p>{p}</p>)}
+    <div class="game-logo">
+      <img src="jetrunner-logo.webp" alt="JETRUNNER logo" />
     </div>
-    <!-- <div class="steam-card">
-      <iframe src="https://store.steampowered.com/widget/1119780/" frameborder="0" width="646" height="190"></iframe>
-    </div> -->
-    <div class="steam-card-small">
-      <div class="steam-icon">
-        <svg><use href="/icons.svg#steam" /></svg>
-      </div>
-      <div class="wishlist-btn">
-        <a href="https://store.steampowered.com/app/1119780/Setback/" target="_blank" rel="noopener" alt="Setback on Steam">Setback on Steam</a>
-      </div>
+    <div class="game-description">
+      <p>
+        JETRUNNER is an action packed parkour first-person shooter set in a crazy sci-fi future.
+      </p>
+      <p>
+        Try the JETRUNNER demo for free on Steam!
+      </p>
+    </div>
+    <div class="game-gallery">
+      <img src="jetrunner-screenshot01.webp" alt="JETRUNNER screenshot" />
+      <img src="jetrunner-screenshot02.webp" alt="JETRUNNER screenshot" />
+    </div>
+    <div class="game-link">
+      <a href="https://store.steampowered.com/app/2865670/JETRUNNER/" target="_blank" rel="noopener">JETRUNNER on Steam</a>
     </div>
   </div>
 </div>
@@ -37,8 +28,9 @@ const setbackData = {
 <style>
   .games {
     width: 100%;
-    background-image: url("/setback-background.webp");
-    background-color: rgb(80, 80, 80);
+    /* background-image: url("/setback-background.webp"); */
+    /* background-color: rgb(80, 80, 80); */
+    background-color: #1b1b1b;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -58,92 +50,67 @@ const setbackData = {
   }
 
   .content {
-    margin-bottom: 4rem;
     width: 100%;
-    min-height: 100vh;
     max-width: var(--content-width);
     display: flex;
-    align-items: center;
-    gap: 4rem;
-  }
-
-  .desc {
-    margin: 2rem;
-  }
-
-  .steam-card {
-    max-width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .steam-card-small {
-    margin: 2rem;
-    width: 100%;
-    max-width: 400px;
-    min-width: 320px;
-    fill: #acafb9;
     flex-direction: column;
-    background-color: #282e39;
-    box-shadow: 0 1px 5px rgba(1, 1, 1, 0.8);
-    /* display: none; */
+    align-items: center;
   }
 
-  .steam-icon {
-    margin: 1rem 0;
-    width: 100%;
-    max-height: 160px;
-    display: flex;
-    justify-content: center;
+  .game-logo {
+    margin-top: 1rem;
+  }
+  .game-logo img {
+    max-width: 100%;
   }
 
-  .wishlist-btn {
+  .game-description {
+    margin: 0.5rem;
+    text-align: center;
+  }
+
+  .game-gallery {
     margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .game-gallery img {
+    width: 100%;
+  }
+
+  .game-link {
+    margin: 1rem;
+    margin-bottom: 2rem;
+    width: calc(100% - 2rem);
+    max-width: 400px;
+    min-height: 60px;
     background: linear-gradient(to right, rgb(111, 167, 32) 5%, rgb(88, 138, 27) 95%);
   }
-
-  .wishlist-btn:hover {
-    background: linear-gradient( to right, #8ed629 5%, #6aa621 95%);
-  }
-
-  .wishlist-btn a {
-    padding: 0.5rem 0;
-    display: inline-block;
+  .game-link a {
     width: 100%;
+    height: 100%;
     color: white;
-    text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   @media (max-width: 1200px) {
     .content {
       flex-direction: column;
       align-items: center;
-      gap: 0;
-    }
-
-    .steam-card-small {
-      max-width: 500px;
-    }
-
-    .steam-icon {
-      margin: 2rem 0;
     }
   }
 
   @media (max-width: 800px) {
-    .desc {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-
-    .steam-card {
-      display: none;
-    }
-
     .steam-card-small {
       display: flex;
+    }
+    .game-gallery {
+      grid-template-columns: 1fr;
     }
   }
 </style>
