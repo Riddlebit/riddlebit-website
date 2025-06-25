@@ -4,7 +4,14 @@
 <div class="games">
   <span id="games" class="nav-anchor" />
   <div class="content">
-    <div class="game-logo">
+    <h1>Current Project: JETRUNNER</h1>
+    <p>
+      A fast-paced parkour-driven first-person shooter. JETRUNNER is brought to life with striking cel-shaded, comic-like visuals.
+      The core of its design is a gameplay loop that blends the high-speed optimization of Trackmania with the expressive movement of Titanfall.
+      This creates a title focused on delivering rich, fluid movement mechanics alongside precise, satisfying gameplay, designed for both player enjoyment and competitive viability.
+    </p>
+    <img src="jetrunner-keyart01.png" class="keyart" />
+    <!-- <div class="game-logo">
       <img src="jetrunner-logo.webp" alt="JETRUNNER logo" />
     </div>
     <div class="game-description">
@@ -18,7 +25,7 @@
     <div class="game-gallery">
       <img src="jetrunner-screenshot01.webp" alt="JETRUNNER screenshot" />
       <img src="jetrunner-screenshot02.webp" alt="JETRUNNER screenshot" />
-    </div>
+    </div> -->
     <div class="game-link">
       <a href="https://store.steampowered.com/app/2865670/JETRUNNER/" target="_blank" rel="noopener">JETRUNNER on Steam</a>
     </div>
@@ -43,10 +50,13 @@
   .games h1, h2 {
     margin-top: 0;
     color: white;
+    margin-top: 2rem;
+    text-align: center;
   }
 
   .games p {
     color: #ddd;
+    margin: 1rem;
   }
 
   .content {
@@ -55,6 +65,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .keyart {
+    width: 100%;
+    max-width: 960px;
   }
 
   .game-logo {
