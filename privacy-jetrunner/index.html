@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><title>Riddlebit Software</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Making the games of tomorrow, today"><!-- Twitter Card --><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@setback"><!-- Open Graph --><meta property="og:title" content="Riddlebit Software"><meta property="og:type" content="website"><meta property="og:site_name" content="Riddlebit"><meta property="og:image" content="https://i.imgur.com/dXmJIbo.png"><meta property="og:description" content="Making the games of tomorrow, today"><style>@import"https://fonts.googleapis.com/css?family=Heebo:100,300,400";:root{font-family:Heebo,sans-serif;font-size:18px;font-weight:400;--content-width: 1200px}body{margin:0;padding:0;min-height:100vh;color:#333;display:flex;flex-direction:column;justify-content:space-between}h1,h2,h3{font-weight:300}.nav-anchor{display:block;position:relative;top:-60px;visibility:hidden}@media screen and (prefers-reduced-motion: reduce){:root{scroll-behavior:auto}}.navbar.svelte-exjm39.svelte-exjm39{position:fixed;width:100%;height:var(--navbar-height);padding:0;margin:0;top:0;z-index:1000;transition:.3s;display:flex;flex-direction:column;align-items:center}.navbar.opaque.svelte-exjm39.svelte-exjm39{background-color:#252525}.navbar.open.svelte-exjm39.svelte-exjm39{height:100vh;background-color:#252525}.nav-toggle-button.svelte-exjm39.svelte-exjm39{width:100%;border:none;height:var(--navbar-height);background-color:#0000}.navlinks.svelte-exjm39.svelte-exjm39{margin:0;padding:0;width:100%;max-width:1000px;height:100%;list-style:none;display:flex;flex-direction:row}.navlinks.svelte-exjm39 button.svelte-exjm39{background-color:#0000}.navlinks.mobile.svelte-exjm39.svelte-exjm39{flex-direction:column;justify-content:start;overflow:hidden}.navlink.svelte-exjm39.svelte-exjm39{padding:0;border:0;width:100%;min-width:120px;height:var(--navbar-height);line-height:var(--navbar-height);text-align:center;font-weight:300}.navlink.svelte-exjm39 a.svelte-exjm39{width:100%;display:inline-block;height:100%;color:#fff;text-decoration:none}.navlink.active.svelte-exjm39.svelte-exjm39{box-shadow:inset 0 5px #ffffffbf}.navbar.svelte-exjm39 a.svelte-exjm39:hover{background-color:#252525}.navbar.opaque.svelte-exjm39 a.svelte-exjm39:hover{background-color:#555}.toggle-button.svelte-exjm39.svelte-exjm39{width:1.5rem;height:100%;fill:#fff;cursor:pointer;display:none}.toggle-button.active.svelte-exjm39.svelte-exjm39{display:inline-block}.footer[data-astro-cid-sz7xmlte]{min-height:120px;background-color:#252525;display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}.footer[data-astro-cid-sz7xmlte] [data-astro-cid-sz7xmlte]{color:#fff;text-decoration:none;font-weight:300}.footer-top[data-astro-cid-sz7xmlte]{width:100%;max-width:1200px;display:flex;justify-content:space-evenly;align-items:center}.footer-social[data-astro-cid-sz7xmlte]{margin-top:2rem;display:flex;align-items:center}.footer-social[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{width:2rem;height:2rem;margin:0 2rem}.footer-social[data-astro-cid-sz7xmlte] svg[data-astro-cid-sz7xmlte]{fill:#fff;width:100%;height:100%}.footer-links[data-astro-cid-sz7xmlte]{margin-top:2rem;display:flex;justify-content:center}.footer-links[data-astro-cid-sz7xmlte] a[data-astro-cid-sz7xmlte]{margin:0 1rem;display:flex;justify-content:center;align-items:center}.footer-links[data-astro-cid-sz7xmlte] svg[data-astro-cid-sz7xmlte]{margin:.5rem;fill:#fff;width:1.2rem;height:1.2rem}.footer-bottom[data-astro-cid-sz7xmlte]{margin-top:2rem;margin-bottom:1rem;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;gap:.5rem}@media (max-width: 1000px){.footer-top[data-astro-cid-sz7xmlte]{flex-direction:column;gap:0}}@media (max-width: 700px){.footer-links[data-astro-cid-sz7xmlte]{flex-direction:column;align-items:flex-start}}
+.wrapper[data-astro-cid-7o2zoivg]{padding-top:4rem;padding-bottom:2rem;display:flex;justify-content:center}.content[data-astro-cid-7o2zoivg]{padding:1rem 4rem;max-width:1000px;font-weight:300}.content[data-astro-cid-7o2zoivg] h2{margin-top:2rem;margin-bottom:.5rem}.content[data-astro-cid-7o2zoivg] p{margin-top:0}@media (min-width: 1200px){.content[data-astro-cid-7o2zoivg]{box-shadow:0 1px 5px #686868cc}}@media (max-width: 730px){.wrapper[data-astro-cid-7o2zoivg]{padding-top:2rem}.content[data-astro-cid-7o2zoivg]{padding-left:1rem;padding-right:1rem}}
+</style></head> <body> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var i=t=>{let e=async()=>{await(await t())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};(self.Astro||(self.Astro={})).idle=i;window.dispatchEvent(new Event("astro:idle"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="ZObOzD" component-url="/_astro/Navbar.Crkl9tNk.js" component-export="default" renderer-url="/_astro/client.Cx1FBVJX.js" props="{}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><nav class="navbar  opaque svelte-exjm39" style="--navbar-height:60px"> <ul class="navlinks  svelte-exjm39"> <li class="navlink  svelte-exjm39"><a href="/#header" rel="noopener" aria-label="Home" class="svelte-exjm39">Home</a> </li><li class="navlink  svelte-exjm39"><a href="/#about" rel="noopener" aria-label="About Us" class="svelte-exjm39">About Us</a> </li><li class="navlink  svelte-exjm39"><a href="/#games" rel="noopener" aria-label="Games" class="svelte-exjm39">Games</a> </li><li class="navlink  svelte-exjm39"><a href="/#our-team" rel="noopener" aria-label="Our Team" class="svelte-exjm39">Our Team</a> </li><li class="navlink  svelte-exjm39"><a href="https://thehub.io/startups/riddlebit-software" rel="noopener" aria-label="Careers" class="svelte-exjm39">Careers</a> </li></ul> </nav><!--astro:end--></astro-island> <main>  <div class="wrapper" data-astro-cid-7o2zoivg> <div class="content" data-astro-cid-7o2zoivg> <h1 id="jetrunner-privacy-policy">JETRUNNER Privacy Policy</h1>
+<p>Last updated: 13. August 2025</p>
+<p>Riddlebit AS (“we”, “us”, “our”) respects your privacy and is committed to protecting your
+personal data. This Privacy Policy explains what information we collect when you play
+JETRUNNER (“Game”), how we use it, and your rights.</p>
+<p>If you have questions about this policy or your data, please contact:</p>
+<p>Riddlebit AS<br>
+Munkegata 58, 7011 Trondheim<br>
+Email: <a href="mailto:legal@riddlebit.net">legal@riddlebit.net</a></p>
+<h2 id="1-information-we-collect">1. Information We Collect</h2>
+<h3 id="11-personal-data">1.1 Personal Data</h3>
+<p>We collect only the minimum personal data necessary to operate the Game’s online features:</p>
+<ul>
+<li>Platform ID – automatically collected to provide online leaderboards or other
+Platform-connected features. Your Platform ID is public by default on the Platform
+unless you change your profile settings.
+<ul>
+<li>We might also collect other publicly available information on your profile</li>
+</ul>
+</li>
+<li>Other identifiers – we do not collect personal information such as your name, email
+address, or postal address unless you voluntarily provide it (e.g., via support requests,
+chats, or forms).</li>
+</ul>
+<h3 id="12-technical--usage-data">1.2 Technical / Usage Data</h3>
+<p>When you play the Game, we may collect:</p>
+<ul>
+<li>Session times, in-game movement, crash reports, menu navigation and gameplay
+statistics
+We do not use cookies or tracking technologies for advertising or behavioral profiling.</li>
+</ul>
+<h2 id="2-how-we-use-the-information">2. How We Use the Information</h2>
+<p>We use the collected information to:</p>
+<ul>
+<li>Operate and provide online features (e.g., leaderboards)</li>
+<li>Maintain and improve game stability, performance, and security</li>
+<li>Detect and prevent cheating, fraud, or abuse</li>
+<li>Fix bugs and troubleshoot technical issues</li>
+</ul>
+<p>We do not use your data for targeted advertising or automated decision-making.</p>
+<h2 id="3-legal-basis-for-processing-eueeauk-users">3. Legal Basis for Processing (EU/EEA/UK Users)</h2>
+<p>We process your data under the following legal bases:</p>
+<ul>
+<li>Performance of a contract – to operate online features you choose to use (e.g.,
+leaderboards)</li>
+<li>Legitimate interests – to ensure performance, security, and improvement of the Game</li>
+<li>Consent – where required for specific optional features</li>
+</ul>
+<p>You may withdraw consent or object to certain processing at any time by contacting us at
+<a href="mailto:legal@riddlebit.net">legal@riddlebit.net</a>.<br>
+Additionally you can disable online features on your platform (e.g. Steam or
+Epic Games Launcher) before using our game.</p>
+<h2 id="4-third-party-services">4. Third-Party Services</h2>
+<p>We share and retrieve limited data with trusted third parties to operate the Game:</p>
+<p><strong>Valve Corporation (Steam)</strong><br>
+<strong>Purpose:</strong> Online leaderboards, account linking<br>
+<strong>Type of Data:</strong> Steam ID<br>
+<strong>Location:</strong> USA, EU<br>
+<strong>Privacy Policy:</strong> <a href="https://store.steampowered.com/privacy_agreement/">https://store.steampowered.com/privacy_agreement/</a></p>
+<p><strong>Epic Games, Inc.</strong><br>
+<strong>Purpose:</strong> Online leaderboards, account linking<br>
+<strong>Type of Data:</strong> Epic ID<br>
+<strong>Location:</strong> USA, EU<br>
+<strong>Privacy Policy:</strong> <a href="https://www.epicgames.com/site/en-US/privacypolicy">https://www.epicgames.com/site/en-US/privacypolicy</a></p>
+<p><strong>Amazon Web Services (AWS)</strong><br>
+<strong>Purpose:</strong> Hosting, online functionality<br>
+<strong>Type of Data:</strong> Gameplay/session data, technical logs<br>
+<strong>Location:</strong> USA, EU<br>
+<strong>Privacy Policy:</strong> <a href="https://aws.amazon.com/privacy/">https://aws.amazon.com/privacy/</a></p>
+<p><strong>Google</strong><br>
+<strong>Purpose:</strong> Forms for feedback<br>
+<strong>Type of Data:</strong> Email<br>
+<strong>Location:</strong> USA, EU<br>
+<strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy?hl=en-US">https://policies.google.com/privacy?hl=en-US</a></p>
+<p><strong>Discord</strong><br>
+<strong>Purpose:</strong> Customer support and interactions<br>
+<strong>Type of Data:</strong> Username<br>
+<strong>Location:</strong> USA, EU<br>
+<strong>Privacy Policy:</strong> <a href="https://discord.com/privacy">https://discord.com/privacy</a></p>
+<h2 id="5-cross-border-data-transfers">5. Cross-Border Data Transfers</h2>
+<p>If your data is transferred outside the EEA/UK (e.g., to the United States), we ensure
+appropriate safeguards, such as:</p>
+<ul>
+<li>Transfers to countries with an adequacy decision by the European Commission</li>
+<li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+<li>Encryption in transit and at rest</li>
+</ul>
+<h2 id="6-your-rights-eueeauk">6. Your Rights (EU/EEA/UK)</h2>
+<p>You have the right to:</p>
+<ul>
+<li>Access, correct, or delete your personal data</li>
+<li>Restrict or object to processing</li>
+<li>Request a copy of your data (data portability)</li>
+<li>Lodge a complaint with your local data protection authority</li>
+</ul>
+<h2 id="7-california-privacy-rights-ccpa">7. California Privacy Rights (CCPA)</h2>
+<p>If you are a California resident, you may request:</p>
+<ul>
+<li>The categories and specific pieces of personal information we have collected about you</li>
+<li>Deletion of your personal information</li>
+</ul>
+<p>We do not sell personal information. To make a request, email <a href="mailto:legal@riddlebit.net">legal@riddlebit.net</a> with your
+Platform ID.</p>
+<h2 id="8-south-korea-privacy-rights-pipa">8. South Korea Privacy Rights (PIPA)</h2>
+<p>For players located in South Korea:</p>
+<ul>
+<li>Purpose of collection – to operate leaderboards, maintain performance, and prevent abuse</li>
+<li>Third-party recipients – Steam (Valve Corporation), Epic Games Launcher (Epic Games, Inc.), AWS (Amazon Web Services), Discord (Discord Inc.)</li>
+<li>Cross-border transfer – Steam, Discord, AWS and Epic Games Launcher data may be transferred to the USA or EU. Data is encrypted in transit.</li>
+</ul>
+<p><strong>South Korea Regulator Contact:</strong><br>
+Personal Information Protection Commission (PIPC)<br>
+Website: <a href="https://www.pipc.go.kr">https://www.pipc.go.kr</a><br>
+Phone: +82-1833-6972</p>
+<h2 id="9-data-retention">9. Data Retention</h2>
+<ul>
+<li>Platform ID, leaderboard data and replays – Until you request us to delete it.
+<ul>
+<li>Deletion of your platform account does not automatically delete your data with us. To do this you must contact us at <a href="mailto:legal@riddlebit.net">legal@riddlebit.net</a> with your Platform ID and ask us to delete it.</li>
+<li>This is to maintain the quality of our game as the online leaderboards is a central feature for the game to work properly.</li>
+</ul>
+</li>
+<li>Technical logs and analytics – retained for up to 12 months, then deleted or anonymized</li>
+</ul>
+<h2 id="10-security">10. Security</h2>
+<p>We use appropriate technical and organizational measures to protect your data. However, no
+online service can be 100% secure.</p>
+<h2 id="11-children">11. Children</h2>
+<p>The Game is not intended for children under 13. We do not knowingly collect data from them. If
+you are between 13 and 18, you must have a parent or guardian’s consent to use online
+features. If we learn we have inadvertently collected data from a child under 13, we will delete it
+promptly.</p>
+<h2 id="12-changes-to-this-policy">12. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Material changes will be clearly
+communicated in-game or on our website before taking effect. The “Last updated” date will
+reflect the latest version.</p>
+<p><strong>If you continue to play the Game after updates to this Privacy Policy, you agree to the revised
+terms.</strong></p> </div> </div>  </main> <footer class="footer" data-astro-cid-sz7xmlte> <div class="footer-top" data-astro-cid-sz7xmlte> <div class="footer-social" data-astro-cid-sz7xmlte> <a href="https://www.linkedin.com/company/riddlebit" target="_blank" rel="noopener" aria-label="Riddlebit on LinkedIn" data-astro-cid-sz7xmlte> <svg data-astro-cid-sz7xmlte><use href="/icons.svg#linkedin" data-astro-cid-sz7xmlte></use></svg> </a> <a href="https://discord.gg/3jBTBDzg" target="_blank" rel="noopener" aria-label="Setback Community Discord server" data-astro-cid-sz7xmlte> <svg data-astro-cid-sz7xmlte><use href="/icons.svg#discord" data-astro-cid-sz7xmlte></use></svg> </a> <a href="https://www.tiktok.com/@playjetrunner" target="_blank" rel="noopener" aria-label="Setback on Twitter" data-astro-cid-sz7xmlte> <svg data-astro-cid-sz7xmlte><use href="/icons.svg#tiktok" data-astro-cid-sz7xmlte></use></svg> </a> </div> <div class="footer-links" data-astro-cid-sz7xmlte> <a href="/contact" aria-label="Contact us by email" data-astro-cid-sz7xmlte> <svg data-astro-cid-sz7xmlte><use href="/icons.svg#envelope" data-astro-cid-sz7xmlte></use></svg>
+Contact Us
+</a> <a href="https://github.com/Riddlebit" target="_blank" rel="noopener" aria-label="Riddlebit on GitHub" data-astro-cid-sz7xmlte> <svg data-astro-cid-sz7xmlte><use href="/icons.svg#github" data-astro-cid-sz7xmlte></use></svg>
+GitHub
+</a> <a href="/privacy" rel="noopener" aria-label="Privacy Policy" data-astro-cid-sz7xmlte> <svg data-astro-cid-sz7xmlte><use href="/icons.svg#user-shield" data-astro-cid-sz7xmlte></use></svg>
+Privacy Policy
+</a> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <div data-astro-cid-sz7xmlte>
+Website made with 🤍 by Riddlebit
+</div> <div data-astro-cid-sz7xmlte>
+&copy; 2024 Riddlebit AS
+</div> <div data-astro-cid-sz7xmlte>
+❤️🧡💛💚💙💜
+</div> </div> </footer>  </body></html> 
